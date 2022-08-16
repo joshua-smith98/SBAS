@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace SBAS
 {
@@ -416,7 +412,8 @@ namespace SBAS
 
                     if (SelectedAudio.All(x => x.IsInDataFile == SelectedAudio.First().IsInDataFile))
                     {
-                        if (SelectedAudio.First().IsInDataFile) {
+                        if (SelectedAudio.First().IsInDataFile)
+                        {
                             Project.DataFile dataFile = SelectedAudio.First().GetDataFile();
                             if (SelectedAudio.All(x => x.GetDataFile() == dataFile)) AudioFileLocation.SelectedItem = dataFile;
                         }
@@ -856,7 +853,8 @@ namespace SBAS
 
         private void PreviewSaveAudioButton_Click(object sender, EventArgs e)
         {
-            if (PreviewSentence.Valid) {
+            if (PreviewSentence.Valid)
+            {
                 SaveFileDialog saveFileDialog = new SaveFileDialog()
                 {
                     Filter = "WAV Audio Files (*.wav)|*.wav",

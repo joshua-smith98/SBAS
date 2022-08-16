@@ -1,17 +1,10 @@
-﻿using System;
+﻿using NAudio.Wave;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Threading;
 using System.IO;
-using NAudio;
-using NAudio.Utils;
-using NAudio.Wave;
-using NAudio.Wave.SampleProviders;
-using NAudio.FileFormats;
-using NAudio.MediaFoundation;
+using System.Linq;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace SBAS
 {

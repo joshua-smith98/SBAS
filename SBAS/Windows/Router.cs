@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace SBAS
 {
@@ -346,7 +343,8 @@ namespace SBAS
 
         private void LineList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!Refreshing) {
+            if (!Refreshing)
+            {
                 if (LineList.SelectedItem != null && LineList.SelectedItem.GetType() != typeof(Project.Line))
                 {
                     Refreshing = true;
@@ -535,7 +533,7 @@ namespace SBAS
 
         private void StopName_TextUpdate(object sender, EventArgs e)
         {
-            
+
         }
 
         private void StopName_Validating(object sender, CancelEventArgs e)

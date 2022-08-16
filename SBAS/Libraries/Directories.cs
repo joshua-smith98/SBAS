@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
 
 namespace SBAS
 {
@@ -20,7 +16,7 @@ namespace SBAS
                 this.Path = Path;
             }
 
-            internal File (string Path, Folder Directory)
+            internal File(string Path, Folder Directory)
             {
                 this.Path = Path;
                 this.Directory = Directory;
