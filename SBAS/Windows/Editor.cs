@@ -485,7 +485,11 @@ namespace SBAS
             PreviewSentence = new Project.Sentence(PreviewTextBox.Text, SBAS.MainController.CurrentProject);
             PreviewPlayButton.Enabled = PreviewSentence.Valid;
             PreviewSaveAudioButton.Enabled = PreviewSentence.Valid;
-            PreviewProcessBox.Text = String.Join(" ", PreviewSentence.Strings.Select(x => x.Text));
+
+            if (PreviewSentence.Valid)
+                PreviewProcessBox.Text = String.Join(" ", PreviewSentence.Strings.Select(x => x.Text));
+            else // Show the index of the error and a basic idea of where the error is
+                PreviewProcessBox.Text = $"Error processing sentence at index '{PreviewSentence.ErrorIndex}': {PreviewTextBox.Text.Substring(0, PreviewSentence.ErrorIndex)} !!";
         }
 
         private void ClearAll()
